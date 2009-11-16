@@ -3,6 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link type="text/css" rel="stylesheet" href="style/common.css" />
+<script type="text/javascript" src="script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="script/gallery.js"></script>
+<script type="text/javascript">
+var gallery = new Gallery($('#gallery'));
+
+gallery.addImage('res/splash_1.png');
+gallery.addImage('res/splash_2.png');
+gallery.addImage('res/splash_3.png');
+gallery.addImage('res/splash_4.png');
+gallery.addImage('res/splash_5.png');
+
+gallery.init();
+</script>
 </head>
 <body>
 <div id="wrapper">
@@ -24,6 +37,25 @@
 			
 	</div>
 	<div id="mainContent">
+		<div id="splashBox">
+			<div id="gallery" class="gallery">
+				<div class="section">
+					<h3>客房住宿</h3>
+					<p>优雅舒适——停靠避风</p>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<p><a href="#">了解更多</a></p>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div id="commendBox">
 			<div class="panel">
 				<div class="header">
