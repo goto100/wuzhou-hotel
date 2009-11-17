@@ -2,9 +2,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]><script type="text/javascript" src="style/expressions.js"></script><![endif]-->
 <link type="text/css" rel="stylesheet" href="style/common.css" />
 <script type="text/javascript" src="script/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="script/gallery.js"></script>
+<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" />
 <script type="text/javascript">
 	$('body').ready(function() {
 		var gallery = new Gallery($('#gallery'), $('#gallery .nav li'));
@@ -16,12 +19,27 @@
 		gallery.addImage('res/splash_5.png');
 
 		gallery.init();
+
+		var more = $('#splashMore');
+		more.trigger = $('#splashMore a');
+		more.menu = $('#splashMore .menu');
+		more.menu.hide();
+		more.trigger.click(function() {
+			more.menu.toggle();
+		})
+
+		$('#thumbFigure a').lightBox({
+			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
+			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
+			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
+			imageBtnNext: 'lib/lightbox/images/libhtbox-btn-next.gif'
+		});
 	});
 </script>
 </head>
 <body>
 <div id="wrapper">
-<div id="header">
+	<div id="header">
 	<div id="logo"><img src="res/logo.png" /></div>	
 	<div id="siteNav">
 		<ul>
@@ -43,9 +61,20 @@
 			<div id="gallery" class="gallery">
 				<div class="section">
 					<h3>客房住宿</h3>
-					<p>优雅舒适——停靠避风</p>
+					<h4 class="subheading">优雅舒适——停靠避风</h4>
 					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
-					<p><a href="#">了解更多</a></p>
+					<div class="more" id="splashMore">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<div class="nav">
 					<ul>
@@ -90,8 +119,8 @@
 					</ul>
 				</div>
 				<div class="section">
-					<div class="figure">
-						<img src="res/bigfigure.png" />
+					<div id="thumbFigure" class="figure">
+						<a title="VIP包房" href="http://10.2.19.79/wuzhou-hotel/web/res/bigfiguresrc.png"><img src="res/bigfigure.png" fullsrc="res/bigfiguresrc.png" /></a>
 						<div class="legend">VIP包房</div>
 					</div>
 					<h4>VIP包房</h4>
