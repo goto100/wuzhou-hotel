@@ -10,8 +10,12 @@ Gallery.prototype = {
 		this.triggers.each(function(i, trigger){
 			trigger = $(trigger);
 			trigger.bind('click', function(e) {
-				this.addClass('selected');
-				gallery.ele.css('background', 'url(' + gallery.images[i].url + ') no-repeat center center');
+				trigger.addClass('selected');
+				var image = new Image();
+				image.onload = function() {
+					gallery.ele.css('background', 'url(' + gallery.images[i].url + ') no-repeat center center');
+				}
+				image.src = gallery.images[i].url;
 				return false;
 			});
 		})
