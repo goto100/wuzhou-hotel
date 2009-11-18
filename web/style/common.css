@@ -235,6 +235,9 @@ a:link, a:visited {
 	float: right;
 	width: 705px;
 }
+.panel {
+	margin-bottom: 10px;
+}
 .panel .header {
 	height: 27px;
 	line-height: 27px;
@@ -276,6 +279,7 @@ a:link, a:visited {
 	float: right;
 	position: relative;
 	margin-left: 20px;
+	margin-bottom: 20px;
 }
 .panel .section .figure a {
 	display: block;
@@ -299,6 +303,16 @@ a:link, a:visited {
 .panel .description li {
 	list-style-image: url(cssimg/point.png);
 	margin-left: 16px;
+}
+
+.panel div.figures {
+	text-align: center;
+}
+.panel div.figures .figure {
+	float: none;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 }
 
 div.gallery {
