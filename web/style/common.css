@@ -160,6 +160,10 @@ a:link, a:visited {
 	*zoom: 1;
 }
 
+input {}
+form p {
+	line-height: 2.0;
+}
 
 #wrapper {
 	width: 960px;
@@ -223,6 +227,14 @@ a:link, a:visited {
 	height: 0;
 	visibility: hidden;
 }
+.box {zoom:1;}
+.box:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
 #splashBox {
 	margin-bottom: 10px;
 }
@@ -235,6 +247,22 @@ a:link, a:visited {
 	float: right;
 	width: 705px;
 }
+#bookBox {
+	float: left;
+	width: 225px;
+	margin-right: 20px;
+}
+#mainCommendBox {
+	width: 470px;
+	float: left;
+	margin-right: 20px;
+}
+#mapBox {
+	float: left;
+	width: 225px;
+}
+
+
 .panel {
 	margin-bottom: 10px;
 }
@@ -266,8 +294,18 @@ a:link, a:visited {
 	color: #333;
 }
 .panel .section {
+	margin-bottom: 10px;
 	color: #666;
 	line-height: 1.4em;
+	border-bottom: 1px solid #CCC;
+	*zoom: 1;
+}
+.panel .section:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
 }
 .panel .section h4 {
 	font-weight: bold;
@@ -279,7 +317,7 @@ a:link, a:visited {
 	float: right;
 	position: relative;
 	margin-left: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .panel .section .figure a {
 	display: block;
@@ -292,6 +330,9 @@ a:link, a:visited {
 	line-height: 24px;
 	opacity: 0.6;
 	*filter: alpha(opacity=90);
+}
+.panel .section p.more {
+	text-align: right;
 }
 .panel .section .summary {
 	margin-bottom: 10px;
