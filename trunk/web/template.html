@@ -10,23 +10,25 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		var gallery = new Gallery($('#gallery'), $('#gallery .nav li'));
+		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/splash_1.png');
-		gallery.addImage('res/splash_2.png');
-		gallery.addImage('res/splash_3.png');
-		gallery.addImage('res/splash_4.png');
-		gallery.addImage('res/splash_5.png');
+		gallery.addImage('res/splash_1.png', $('#gallery-1'));
+		gallery.addImage('res/splash_2.png', $('#gallery-2'));
+		gallery.addImage('res/splash_3.png', $('#gallery-3'));
+		gallery.addImage('res/splash_4.png', $('#gallery-4'));
+		gallery.addImage('res/splash_5.png', $('#gallery-5'));
 
 		gallery.init();
 
-		var more = $('#splashMore');
-		more.trigger = $('#splashMore a');
-		more.menu = $('#splashMore .menu');
-		more.menu.hide();
-		more.trigger.click(function() {
-			more.menu.toggle();
-		})
+		gallery.onload = function() {
+			var more = $('#gallery .section .more');
+			more.trigger = $('#gallery .section .more a');
+			more.menu = $('#gallery .section .menu');
+			more.menu.hide();
+			more.trigger.click(function() {
+				more.menu.toggle();
+			});
+		}
 
 		$('#thumbFigure a, #thumbFigures a').lightBox({
 			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
@@ -56,11 +58,80 @@
 	<div id="mainContent">
 		<div id="splashBox" class="box">
 			<div id="gallery" class="gallery">
-				<div class="section">
-					<h3>客房住宿</h3>
-					<h4 class="subheading">优雅舒适——停靠避风</h4>
+				<div id="gallery-box" class="section"></div>
+				<div id="gallery-1" class="section" style="display: none">
+					<h3>酒店大厅</h3>
+					<h4 class="subheading">酒店大厅</h4>
 					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
-					<div class="more" id="splashMore">
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-2" class="section" style="display: none;">
+					<h3>客房住宿</h3>
+					<h4 class="subheading">客房住宿</h4>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-3" class="section" style="display:none;">
+					<h3>康体中心</h3>
+					<h4 class="subheading">康体中心</h4>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-4" class="section" style="display:none;">
+					<h3>会议中心</h3>
+					<h4 class="subheading">会议中心</h4>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-5" class="section" style="display:none;">
+					<h3>菜品展示</h3>
+					<h4 class="subheading">菜品展示</h4>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<div class="more">
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
@@ -104,7 +175,6 @@
 							<img src="res/figure.png" />
 						</div>
 						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
-						<p class="more"><a href="#">查看详情</a></p>
 					</div>
 				</div>
 				<div class="section">
@@ -113,7 +183,6 @@
 							<img src="res/figure.png" />
 						</div>
 						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
-						<p class="more"><a href="#">查看详情</a></p>
 					</div>
 				</div>
 			</div>
