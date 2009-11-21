@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--[if IE]><script type="text/javascript" src="style/expressions.js"></script><![endif]-->
+<link type="text/css" rel="stylesheet" href="style/common.css" />
+<script type="text/javascript" src="script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="script/gallery.js"></script>
+<script type="text/javascript" src="lib/lightbox/js/jquery.lightbox-0.5.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
+<script type="text/javascript">
+	$('body').ready(function() {
+		var gallery = new Gallery($('#gallery'), $('#gallery .nav li'));
+
+		gallery.addImage('res/splash_1.png');
+		gallery.addImage('res/splash_2.png');
+		gallery.addImage('res/splash_3.png');
+		gallery.addImage('res/splash_4.png');
+		gallery.addImage('res/splash_5.png');
+
+		gallery.init();
+
+		var more = $('#splashMore');
+		more.trigger = $('#splashMore a');
+		more.menu = $('#splashMore .menu');
+		more.menu.hide();
+		more.trigger.click(function() {
+			more.menu.toggle();
+		})
+
+		$('#thumbFigure a, #thumbFigures a').lightBox({
+			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
+			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
+			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
+			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
+		});
+	});
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+	<div id="logo"><img src="res/logo.png" /></div>	
+	<div id="siteNav">
+		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li class="selected"><a href="room.html">客房住宿</a></li>
+			<li><a href="fitness.html">康体中心</a></li>
+			<li><a href="conference.html">会议中心</a></li>
+			<li><a href="cusine.html">菜品展示</a></li>
+			<li><a href="aboutus.html">关于我们</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content">
+	<div id="mainContent">
+		<div id="splashBox" class="box">
+			<div id="gallery" class="gallery">
+				<div class="section">
+					<h3>客房住宿</h3>
+					<h4 class="subheading">优雅舒适——停靠避风</h4>
+					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
+					<div class="more" id="splashMore">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="#">客房住宿</a></li>
+								<li><a href="#">康体娱乐</a></li>
+								<li><a href="#">会议中心</a></li>
+								<li><a href="#">菜品展示</a></li>
+								<li><a href="#">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="commendBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>超值推荐</h3>
+				</div>
+				<div class="section">
+					<div class="figurepanel">
+						<div class="figure">
+							<img src="res/figure.png" />
+						</div>
+						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
+						<p class="more"><a href="#">查看详情</a></p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="figurepanel">
+						<div class="figure">
+							<img src="res/figure.png" />
+						</div>
+						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
+						<p class="more"><a href="#">查看详情</a></p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="figurepanel">
+						<div class="figure">
+							<img src="res/figure.png" />
+						</div>
+						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
+						<p class="more"><a href="#">查看详情</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="mainContentBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>会所设施</h3>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#">音乐大厅</a></li>
+						<li><a href="#">御江南包房</a></li>
+						<li><a href="#">肯尼迪包房</a></li>
+						<li class="selected"><a href="#">VIP包房</a></li>
+						<li><a href="#">钻石包房</a></li>
+						<li><a href="#">中包房</a></li>
+					</ul>
+				</div>
+				<div class="section">
+					<div id="thumbFigure" class="figure">
+						<a title="VIP包房" href="res/bigfiguresrc.png"><img src="res/bigfigure.png" /></a>
+						<div class="legend">VIP包房</div>
+					</div>
+					<h4>VIP包房</h4>
+					<p class="summary">豪华的VIP包房、豪华套房及各型商务、普通、标准间、单人间。装饰古典雅致、宁静舒适、设施齐备。新增蜜月套房、书香房、生态房等多种特色房型，可全方位满足客人不同需求。</p>
+					<hr />
+					<div class="description">
+						<ul>
+							<li>可容纳14—18人</li>
+							<li>4支HI-FI无线话筒</li>
+							<li>免费果盘</li>
+							<li>免费纸巾</li>
+							<li>13万首中文金曲</li>
+							<li>独立舞台及灯光</li>
+							<li>可提前预定</li>
+							<li>五洲会员享受9折</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box" style="clear:both">
+		<div id="bookBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>在线预订</h3>
+				</div>
+				<div class="section">
+					<form action="#" method="post">
+						<p><label><span>入住日期</span> <input class="datepicker" type="text" /></label></p>
+						<p><label><span>离店日期</span> <input class="datepicker" type="text" /></label></p>
+						<p><label>
+								<span>房间</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label>
+								<span>成人</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label>
+								<span>儿童</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label><span>输入促销代码</span> <input type="text" /></label></p>
+						<p>
+							<input type="submit" value="立即预定" />
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="mainCommendBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>超值推荐</h3>
+				</div>
+				<div class="section">
+					<a href="#"><img src="res/mainCommend.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="mapBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>酒店位置</h3>
+				</div>
+				<div class="section">
+					<iframe width="225" height="190" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=%E9%87%8D%E5%BA%86%E4%BA%94%E6%B4%B2%E5%A4%A7%E9%85%92%E5%BA%97&amp;sll=37.0625,-95.677068&amp;sspn=51.089971,114.169922&amp;ie=UTF8&amp;hq=%E4%BA%94%E6%B4%B2%E5%A4%A7%E9%85%92%E5%BA%97&amp;hnear=Chongqing,+China&amp;ll=29.591894,106.522579&amp;spn=0.014181,0.019312&amp;z=14&amp;output=embed"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<div id="footer">
+	<p id="copyright">地址：中国 重庆 渝北区红锦大道63号 &nbsp;&nbsp;&nbsp;邮编：401147 &nbsp;&nbsp;&nbsp;总机：023-67676666&nbsp;&nbsp;&nbsp;传真：023-67676767</p>
+</div>
+</div>
+<link type="text/css" rel="stylesheet" href="lib/jquery.ui/css/south-street/jquery-ui-1.7.2.custom.css" />
+<script type="text/javascript" src="lib/jquery.ui/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="lib/jquery.ui/js/zh-CN.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.datepicker.setDefaults($.extend({showMonthAfterYear: false}, $.datepicker.regional['zh-CN']));
+		$("input.datepicker").datepicker();
+	});
+</script>
+</body>
+</html>
+
