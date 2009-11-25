@@ -10,23 +10,26 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		var gallery = new Gallery($('#gallery'), $('#gallery .nav li'));
+		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/splash_1.png');
-		gallery.addImage('res/splash_2.png');
-		gallery.addImage('res/splash_3.png');
-		gallery.addImage('res/splash_4.png');
-		gallery.addImage('res/splash_5.png');
+		gallery.addImage('res/cusine3.png', $('#gallery-1'));
+		gallery.addImage('res/cusine1.png', $('#gallery-2'));
+		gallery.addImage('res/cusine2.png', $('#gallery-3'));
+		gallery.addImage('res/common_pics1.png', $('#gallery-4'));
+		gallery.addImage('res/common_pics1.png', $('#gallery-5'));
 
-		gallery.init();
+		gallery.init(0);
 
-		var more = $('#splashMore');
-		more.trigger = $('#splashMore a');
-		more.menu = $('#splashMore .menu');
-		more.menu.hide();
-		more.trigger.click(function() {
-			more.menu.toggle();
-		})
+		gallery.onload = function() {
+			var more = $('#gallery .section .more');
+			more.trigger = $('#gallery .section .more a');
+			more.menu = $('#gallery .section .menu');
+			more.menu.hide();
+			more.trigger.click(function() {
+				more.menu.toggle();
+				clearInterval(gallery.timer);
+			});
+		}
 
 		$('#thumbFigure a, #thumbFigures a').lightBox({
 			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
@@ -45,33 +48,42 @@
 		<ul>
 			<li><a href="index.html">首页</a></li>
 			<li><a href="room.html">客房住宿</a></li>
-			<li><a href="fitness.html">康体中心</a></li>
-			<li><a href="conference.html">会议中心</a></li>
-			<li class="selected"><a href="cusine.html">菜品展示</a></li>
+			<li><a href="fitness.html">动感五洲</a></li>
+			<li><a href="conference.html">五洲之夜</a></li>
+			<li class="selected"><a href="cusine.html">五洲美食</a></li>
 			<li><a href="aboutus.html">关于我们</a></li>
 		</ul>
 	</div>
 </div>
 <div id="content">
 	<div id="mainContent">
-		<div id="splashBox">
+		<div id="splashBox" class="box">
 			<div id="gallery" class="gallery">
-				<div class="section">
-					<h3>客房住宿</h3>
-					<h4 class="subheading">优雅舒适——停靠避风</h4>
-					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
-					<div class="more" id="splashMore">
-						<a class="legend" href="#">了解更多 ▶</a>
-						<div class="menu">
-							<ul>
-								<li><a href="#">客房住宿</a></li>
-								<li><a href="#">康体娱乐</a></li>
-								<li><a href="#">会议中心</a></li>
-								<li><a href="#">菜品展示</a></li>
-								<li><a href="#">关于我们</a></li>
-							</ul>
-						</div>
-					</div>
+				<div id="gallery-box" class="section"></div>
+				<div id="gallery-1" class="section" style="display: none">
+					<h3>精品粤菜</h3>
+					<h4 class="subheading">纯正的广式风味</h4>
+					<p>此处需要酒店提供相应文档</p>
+				</div>
+				<div id="gallery-2" class="section" style="display: none;">
+					<h3>精品川菜</h3>
+					<h4 class="subheading">新辣道主义</h4>
+					<p>此处需要酒店提供相应文档</p>
+				</div>
+				<div id="gallery-3" class="section" style="display:none;">
+					<h3>五洲养身</h3>
+					<h4 class="subheading">取用纯天然食材精心烹制</h4>
+					<p>此处需要酒店提供相应文档</p>
+				</div>
+				<div id="gallery-4" class="section" style="display:none;">
+					<h3>五洲靓汤</h3>
+					<h4 class="subheading">汤珍其味、器珍其型</h4>
+					<p>此处需要酒店提供相应文档</p>
+				</div>
+				<div id="gallery-5" class="section" style="display:none;">
+					<h3>阳光西餐厅</h3>
+					<h4 class="subheading">精品自助餐系列</h4>
+					<p>此处需要酒店提供相应文档</p>
 				</div>
 				<div class="nav">
 					<ul>
@@ -84,7 +96,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="commendBox">
+		<div id="commendBox" class="box">
 			<div class="panel">
 				<div class="header">
 					<h3>超值推荐</h3>
@@ -94,80 +106,68 @@
 						<div class="figure">
 							<img src="res/figure.png" />
 						</div>
-						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
-						<p class="more"><a href="#">查看详情</a></p>
+						<p>周一至周五，标准客房八折优惠，还有SPA优惠券，奢华尊贵体验。</p>
 					</div>
 				</div>
-			</div>
-			<div class="panel">
-				<div class="header">
-					<h3>超值推荐</h3>
-				</div>
 				<div class="section">
 					<div class="figurepanel">
 						<div class="figure">
 							<img src="res/figure.png" />
 						</div>
-						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
-						<p class="more"><a href="#">查看详情</a></p>
+						<p>周一至周五，标准客房八折优惠，还有SPA优惠券，奢华尊贵体验。</p>
 					</div>
 				</div>
-			</div>
-			<div class="panel">
-				<div class="header">
-					<h3>超值推荐</h3>
-				</div>
 				<div class="section">
 					<div class="figurepanel">
 						<div class="figure">
 							<img src="res/figure.png" />
 						</div>
-						<p>周一至周五、钻石包房八折优惠，还有SPA优惠券，超</p>
-						<p class="more"><a href="#">查看详情</a></p>
+						<p>预定法式养身SPA护理套餐，赠送2晚豪华标准间住宿</p>
+						<p class="more"><a href="#">查看详情－需酒店提供内容</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="mainContentBox">
+		<div id="mainContentBox" class="box">
 			<div class="panel">
 				<div class="header">
-					<h3>菜品展示</h3>
+					<h3>五洲美食</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="#">音乐大厅</a></li>
-						<li><a href="#">御江南包房</a></li>
-						<li><a href="#">肯尼迪包房</a></li>
-						<li class="selected"><a href="#">VIP包房</a></li>
-						<li><a href="#">钻石包房</a></li>
-						<li><a href="#">中包房</a></li>
+						<li class="selected"><a href="#">精品粤菜</a></li>
+						<li><a href="#">粤色轩</a></li>
+                                                <li><a href="#">阳光西餐厅</a></li>
+						<li><a href="#">听蝉轩</a></li>
+						<li><a href="#">九龙阁</a></li>
+						<li><a href="#">辣道主义</a></li>
 					</ul>
 				</div>
 				<div class="section">
 					<div class="figures" id="thumbFigures">
 						<div class="figure">
-							<a title="鱼香肉丝" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
+							<div class="legend">夏日之恋</div>
 						</div>
 						<div class="figure">
-							<a title="干煸豆角" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
+							<div class="legend">夏日之恋</div>
 						</div>
 						<div class="figure">
-							<a title="西红柿炒鸡蛋" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
+							<div class="legend">夏日之恋</div>
 						</div>
 						<div class="figure">
-							<a title="拍黄瓜" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
+							<div class="legend">小米辽参</div>
 						</div>
 						<div class="figure">
-							<a title="拔丝土豆" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
+							<div class="legend">小米辽参</div>
 						</div>
 						<div class="figure">
-							<a title="番茄牛腩" href="res/bigfiguresrc.png"><img src="res/小米辽参.jpg" width="200" /></a>
-							<div class="legend">标题</div>
+							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
+							<div class="legend">小米辽参</div>
 						</div>
 					</div>
 				</div>
@@ -179,6 +179,15 @@
 	<p id="copyright">地址：中国 重庆 渝北区红锦大道63号 &nbsp;&nbsp;&nbsp;邮编：401147 &nbsp;&nbsp;&nbsp;总机：023-67676666&nbsp;&nbsp;&nbsp;传真：023-67676767</p>
 </div>
 </div>
+<link type="text/css" rel="stylesheet" href="lib/jquery.ui/css/south-street/jquery-ui-1.7.2.custom.css" />
+<script type="text/javascript" src="lib/jquery.ui/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="lib/jquery.ui/js/zh-CN.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.datepicker.setDefaults($.extend({showMonthAfterYear: false}, $.datepicker.regional['zh-CN']));
+		$("input.datepicker").datepicker();
+	});
+</script>
 </body>
 </html>
 
