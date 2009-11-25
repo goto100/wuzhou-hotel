@@ -365,12 +365,13 @@ div.gallery {
 div.gallery .section {
 	position: relative;
 	z-index: 1;
-	background-color: #FFFAEE;
-	width: 270px;
+	background: url(cssimg/top1.png) no-repeat center center;
+	width: 276px;
 	padding: 30px;
 	height: 280px;
 	margin-left: 30px;
-	border-bottom: 1px solid #EFEEEA;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='style/cssimg/top1.png', sizingMethod='crop');
 }
 div.gallery .section h3 {
 	font-size: 14px;
@@ -393,7 +394,7 @@ div.gallery .section .more {
 	position: relative;
 	font-weight: bold;
 	text-align: right;
-	margin-top: 120px;
+	margin-top: 80px;
 	font-size: 14px;
 	color: #904A23;
 	*zoom: 1;
@@ -440,15 +441,20 @@ div.gallery .nav {
 	*zoom: expression(function(ele){ele.style.zoom="1";Expressions.borderRadius(ele,[0,0,5,5])}(this));
 }
 div.gallery .nav li {
-	width: 9px;
-	height: 9px;
-	margin: 7px 5px;
-	background: url(cssimg/point2.png) no-repeat center center;
+	width: 16px;
+	margin: 4px;
+	background: url(cssimg/dot0.png) no-repeat center center;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='style/cssimg/dot0.png', sizingMethod='crop');
+}
+div.gallery .nav li.selected {
+	background: url(cssimg/dot1.png) no-repeat center center;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='style/cssimg/dot1.png', sizingMethod='crop');
 }
 div.gallery .nav a {
 	display: block;
-	height: 9px;
+	height: 16px;
 	overflow: hidden;
+	_position: relative;
 }
 
 

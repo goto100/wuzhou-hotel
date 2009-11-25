@@ -10,23 +10,26 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		var gallery = new Gallery($('#gallery'), $('#gallery .nav li'));
+		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/splash_1.png');
-		gallery.addImage('res/splash_2.png');
-		gallery.addImage('res/splash_3.png');
-		gallery.addImage('res/splash_4.png');
-		gallery.addImage('res/splash_5.png');
+		gallery.addImage('res/index1.gif', $('#gallery-1'));
+		gallery.addImage('res/index2.gif', $('#gallery-2'));
+		gallery.addImage('res/index5.gif', $('#gallery-3'));
+		gallery.addImage('res/index4.gif', $('#gallery-4'));
+		gallery.addImage('res/index3.gif', $('#gallery-5'));
 
-		gallery.init();
+		gallery.init(0);
 
-		var more = $('#splashMore');
-		more.trigger = $('#splashMore a');
-		more.menu = $('#splashMore .menu');
-		more.menu.hide();
-		more.trigger.click(function() {
-			more.menu.toggle();
-		})
+		gallery.onload = function() {
+			var more = $('#gallery .section .more');
+			more.trigger = $('#gallery .section .more a');
+			more.menu = $('#gallery .section .menu');
+			more.menu.hide();
+			more.trigger.click(function() {
+				more.menu.toggle();
+				clearInterval(gallery.timer);
+			});
+		}
 
 		$('#thumbFigure a, #thumbFigures a').lightBox({
 			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
@@ -45,30 +48,98 @@
 		<ul>
 			<li class="selected"><a href="index.html">首页</a></li>
 			<li><a href="room.html">客房住宿</a></li>
-			<li><a href="fitness.html">康体中心</a></li>
-			<li><a href="conference.html">会议中心</a></li>
-			<li><a href="cusine.html">菜品展示</a></li>
+			<li><a href="fitness.html">动感五洲</a></li>
+			<li><a href="conference.html">五洲之夜</a></li>
+			<li><a href="cusine.html">五洲美食</a></li>
 			<li><a href="aboutus.html">关于我们</a></li>
 		</ul>
 	</div>
 </div>
 <div id="content">
 	<div id="mainContent">
-		<div id="splashBox">
+		<div id="splashBox" class="box">
 			<div id="gallery" class="gallery">
-				<div class="section">
-					<h3>客房住宿</h3>
-					<h4 class="subheading">优雅舒适——停靠避风</h4>
-					<p>重庆五洲大酒店坐落在，宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，让你有家一般的温暖。</p>
-					<div class="more" id="splashMore">
+				<div id="gallery-box" class="section"></div>
+				<div id="gallery-1" class="section" style="display: none">
+					<h3>重庆五洲大酒店</h3>
+					<h4 class="subheading">酒店大厅</h4>
+					<p>重庆五洲大酒店酒店地处江北加州花园 210国道/机场高速公路起点，扼重庆门户要冲10分钟抵达机场，15分钟畅达解放碑。</p>
+					<div class="more">
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
-								<li><a href="#">客房住宿</a></li>
-								<li><a href="#">康体娱乐</a></li>
-								<li><a href="#">会议中心</a></li>
-								<li><a href="#">菜品展示</a></li>
-								<li><a href="#">关于我们</a></li>
+								<li><a href="room.html">客房住宿</a></li>
+								<li><a href="fitness.html">动感五洲</a></li>
+								<li><a href="conference.html">五洲之夜</a></li>
+								<li><a href="cusine.html">五洲美食</a></li>
+								<li><a href="aboutus.html">关于我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-2" class="section" style="display: none;">
+					<h3>客房住宿</h3>
+					<h4 class="subheading">触摸奢华之旅</h4>
+					<p>宽敞明亮的客房和套间，柔和的色调，温柔的灯光。先进的设施体贴入微的服务，唤醒您的所有感官，带给您清新舒爽的全新感受。。</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="room.html">标准客房</a></li>
+								<li><a href="room.html">单人客房</a></li>
+								<li><a href="#">行政客房</a></li>
+								<li><a href="#">中式套房</a></li>
+								<li><a href="#">总统套房</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-3" class="section" style="display:none;">
+					<h3>动感五洲</h3>
+					<h4 class="subheading">身心合一的运动享受</h4>
+					<p>此处需要酒店提供相应文档</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="fitness.html">室内网球场</a></li>
+								<li><a href="fitness.html">恒温游泳池</a></li>
+								<li><a href="fitness.html">室内健身房</a></li>
+								<li><a href="fitness.html">斯诺克及美式台球</a></li>
+								<li><a href="fitness.html">SPA中心</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-4" class="section" style="display:none;">
+					<h3>五洲之夜</h3>
+					<h4 class="subheading">会所、KTV－感受魅力重庆</h4>
+					<p>此处需要酒店提供相应文档</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="conference.html">水晶会所</a></li>
+								<li><a href="conference.html">KTV会所</a></li>
+								<li><a href="conference.html">音乐会所</a></li>
+								<li><a href="conference.html">夜上海舞厅</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="gallery-5" class="section" style="display:none;">
+					<h3>五洲美食</h3>
+					<h4 class="subheading">尊享味觉饕餮盛宴</h4>
+					<p>此处需要酒店提供相应文档</p>
+					<div class="more">
+						<a class="legend" href="#">了解更多 ▶</a>
+						<div class="menu">
+							<ul>
+								<li><a href="cusine.html">阳光西餐厅</a></li>
+								<li><a href="cusine.html">粤色轩</a></li>
+								<li><a href="cusine.html">听蝉轩</a></li>
+								<li><a href="cusine.html">九龙阁</a></li>
+								<li><a href="cusine.html">辣道主义</a></li>
 							</ul>
 						</div>
 					</div>
@@ -84,12 +155,85 @@
 				</div>
 			</div>
 		</div>
+		<div id="bookBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>在线预订(功能预留)</h3>
+				</div>
+				<div class="section">
+					<form action="#" method="post">
+						<p><label><span>入住日期</span> <input class="datepicker" type="text" /></label></p>
+						<p><label><span>离店日期</span> <input class="datepicker" type="text" /></label></p>
+						<p><label>
+								<span>房间</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label>
+								<span>成人</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label>
+								<span>儿童</span>
+								<select>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+						</label></p>
+						<p><label><span>输入促销代码</span> <input type="text" /></label></p>
+						<p>
+							<input type="submit" value="立即预定" />
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="mainCommendBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>超值推荐</h3>
+				</div>
+				<div class="section">
+					<a href="#"><img src="res/indexcommend.png"/></a>
+				</div>
+			</div>
+		</div>
+		<div id="mapBox" class="box">
+			<div class="panel">
+				<div class="header">
+					<h3>酒店位置</h3>
+				</div>
+				<div class="section">
+					<iframe width="225" height="190" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=%E9%87%8D%E5%BA%86%E4%BA%94%E6%B4%B2%E5%A4%A7%E9%85%92%E5%BA%97&amp;sll=37.0625,-95.677068&amp;sspn=51.089971,114.169922&amp;ie=UTF8&amp;hq=%E4%BA%94%E6%B4%B2%E5%A4%A7%E9%85%92%E5%BA%97&amp;hnear=Chongqing,+China&amp;ll=29.591894,106.522579&amp;spn=0.014181,0.019312&amp;z=14&amp;output=embed"></iframe>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="footer">
 	<p id="copyright">地址：中国 重庆 渝北区红锦大道63号 &nbsp;&nbsp;&nbsp;邮编：401147 &nbsp;&nbsp;&nbsp;总机：023-67676666&nbsp;&nbsp;&nbsp;传真：023-67676767</p>
 </div>
 </div>
+<link type="text/css" rel="stylesheet" href="lib/jquery.ui/css/south-street/jquery-ui-1.7.2.custom.css" />
+<script type="text/javascript" src="lib/jquery.ui/js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="lib/jquery.ui/js/zh-CN.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.datepicker.setDefaults($.extend({showMonthAfterYear: false}, $.datepicker.regional['zh-CN']));
+		$("input.datepicker").datepicker();
+	});
+</script>
 </body>
 </html>
 

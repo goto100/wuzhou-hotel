@@ -27,6 +27,7 @@
 			more.menu.hide();
 			more.trigger.click(function() {
 				more.menu.toggle();
+				clearInterval(gallery.timer);
 			});
 		}
 
