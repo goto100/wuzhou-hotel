@@ -30,11 +30,22 @@
 			});
 		}
 
-		$('#thumbFigure a, #thumbFigures a').lightBox({
+		$('.content-panel .figure a, #thumbFigures a').lightBox({
 			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
 			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
 			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
 			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
+		});
+
+		var anchors = $('.content-panel .nav li a');
+		anchors.click(function() {
+			for (var i = 0; anchor = anchors[i]; i++) {
+				$($(anchor).attr('href')).hide();
+				$(anchor.parentNode).removeClass('selected');
+			}
+			$($(this).attr('href')).show();
+			$(this.parentNode).addClass('selected');
+			return false;
 		});
 	});
 </script>
@@ -119,26 +130,127 @@
 			</div>
 		</div>
 		<div id="mainContentBox" class="box">
-			<div class="panel">
+			<div class="panel content-panel">
 				<div class="header">
 					<h3>客房详情</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li class="selected"><a href="#">标准客房</a></li>
-						<li><a href="#">单人客房</a></li>
-						<li><a href="#">行政客房</a></li>
-						<li><a href="#">中式套房</a></li>
-						<li><a href="#">总统套房</a></li>
+						<li class="selected"><a href="#room1-section">商务标准间</a></li>
+						<li><a href="#room2-section">行政单人间</a></li>
+						<li><a href="#room3-section">商务套房</a></li>
+						<li><a href="#room4-section">豪华套房</a></li>
 					</ul>
 				</div>
-				<div class="section">
-					<div id="thumbFigure" class="figure">
-						<a title="标准客房" href="res/roombigfigurerc.png"><img src="res/roombigfigure.png" /></a>
-						<div class="legend">标准客房</div>
+				<div id="room1-section" class="section">
+					<div class="figure">
+						<a title="商务标准间" href="res/roombigfigurerc.png"><img src="res/roombigfigure.png" /></a>
+						<div class="legend">商务标准间</div>
 					</div>
-					<h4>VIP包房</h4>
-					<p class="summary">豪华的VIP包房、豪华套房及各型商务、普通、标准间、单人间。装饰古典雅致、宁静舒适、设施齐备。新增蜜月套房、书香房、生态房等多种特色房型，可全方位满足客人不同需求。</p>
+					<h4>商务标准间</h4>
+					<p class="summary">面积为30平方米的商务标准间位于酒店6-12楼，房间配有两张1.3×2.0的超宽单人床，进口的卫生洁具，高档舒适的棉品。</p>
+					<hr />
+					<div class="description">
+						<ul>
+							<li>所有客房免费提供高速宽带上网</li>
+							<li>符合人体工学的办公桌椅</li>
+							<li>标志性卫浴用品</li>
+							<li>迷你吧</li>
+							<li>浴袍和拖鞋</li>
+							<li>体重秤</li>
+							<li>电吹风</li>
+							<li>环保无噪音冰箱</li>
+							<li>电热水壶</li>
+							<li>液晶电视</li>
+							<li>夜床服务</li>
+							<li>个性化唤醒服务</li>
+							<li>国内/国际长途电话直拨</li>
+							<li>宾客服务中心为您提供全天24小时服务，随时解答您的各种查询</li>
+							<li>保险箱服务</li>
+							<li>24小时送餐服务</li>
+							<li>洗衣服务</li>
+							<li>托婴服务</li>
+							<li>免费拨打市内主城区电话</li>
+							<li>入住酒店行政单间及以上房间，每天均免费赠送新鲜时令水果</li>
+							<li>免费瓶装水</li>
+						</ul>
+					</div>
+				</div>
+				<div id="room2-section" class="section" style="display:none">
+					<div class="figure">
+						<a title="行政单人间" href="res/roombigfigurerc.png"><img src="res/roombigfigure.png" /></a>
+						<div class="legend">行政单人间</div>
+					</div>
+					<h4>行政单人间</h4>
+					<p class="summary">面积为30平方米的行政单人间位于酒店6-15楼，房间配有一张2.0*2.2米的双人大床，进口卫生洁具，高档舒适的棉品，液晶电脑。</p>
+					<hr />
+					<div class="description">
+						<ul>
+							<li>所有客房免费提供高速宽带上网</li>
+							<li>符合人体工学的办公桌椅</li>
+							<li>标志性卫浴用品</li>
+							<li>迷你吧</li>
+							<li>浴袍和拖鞋</li>
+							<li>体重秤</li>
+							<li>电吹风</li>
+							<li>环保无噪音冰箱</li>
+							<li>电热水壶</li>
+							<li>液晶电视</li>
+							<li>夜床服务</li>
+							<li>个性化唤醒服务</li>
+							<li>国内/国际长途电话直拨</li>
+							<li>宾客服务中心为您提供全天24小时服务，随时解答您的各种查询</li>
+							<li>保险箱服务</li>
+							<li>24小时送餐服务</li>
+							<li>洗衣服务</li>
+							<li>托婴服务</li>
+							<li>免费拨打市内主城区电话</li>
+							<li>入住酒店行政单间及以上房间，每天均免费赠送新鲜时令水果</li>
+							<li>免费瓶装水</li>
+						</ul>
+					</div>
+				</div>
+				<div id="room3-section" class="section" style="display:none">
+					<div class="figure">
+						<a title="商务套房" href="res/roombigfigurerc.png"><img src="res/roombigfigure.png" /></a>
+						<div class="legend">商务套房</div>
+					</div>
+					<h4>商务套房</h4>
+					<p class="summary">面积为65平方米的商务套房位于酒店6-15楼，内设卧室、起居室、卫生间各一间，配有一张2.0*2.2米的双人大床，全套家具，进口卫生洁具，高档舒适的棉品，液晶电脑。</p>
+					<hr />
+					<div class="description">
+						<ul>
+							<li>所有客房免费提供高速宽带上网</li>
+							<li>符合人体工学的办公桌椅</li>
+							<li>标志性卫浴用品</li>
+							<li>迷你吧</li>
+							<li>浴袍和拖鞋</li>
+							<li>体重秤</li>
+							<li>电吹风</li>
+							<li>环保无噪音冰箱</li>
+							<li>电热水壶</li>
+							<li>液晶电视</li>
+							<li>夜床服务</li>
+							<li>个性化唤醒服务</li>
+							<li>国内/国际长途电话直拨</li>
+							<li>宾客服务中心为您提供全天24小时服务，随时解答您的各种查询</li>
+							<li>保险箱服务</li>
+							<li>24小时送餐服务</li>
+							<li>洗衣服务</li>
+							<li>托婴服务</li>
+							<li>免费拨打市内主城区电话</li>
+							<li>入住酒店行政单间及以上房间，每天均免费赠送新鲜时令水果</li>
+							<li>免费瓶装水</li>
+						</ul>
+					</div>
+				</div>
+				<div id="room4-section" class="section" style="display:none">
+					<div class="figure">
+						<a title="豪华套房" href="res/roombigfigurerc.png"><img src="res/roombigfigure.png" /></a>
+						<div class="legend">豪华套房</div>
+					</div>
+					<h4>豪华套房</h4>
+					<p class="summary">面积为100平方米的豪华套房位于酒店15楼，内设主、客卧室各一间，卧室内分别配有卫生间各一间，主卧室配有一张2.0*2.2米双人大床，客卧配有两张1.3*2.0米的超宽单人床，全套家具，进口卫生洁具，高档舒适的棉品，液晶电脑。个别豪华套房还配有带超大办公桌行政区域，配有传真机、打印机等办公设备。</p>
 					<hr />
 					<div class="description">
 						<ul>
