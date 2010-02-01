@@ -12,10 +12,8 @@
 	$('body').ready(function() {
 		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/cusine3.png', $('#gallery-1'));
-		gallery.addImage('res/cusine1.png', $('#gallery-2'));
-		gallery.addImage('res/cusine2.png', $('#gallery-3'));
-		gallery.addImage('res/common_pics1.png', $('#gallery-4'));
+		gallery.addImage('res/fitness1.gif', $('#gallery-1'));
+		gallery.addImage('res/fitness2.png', $('#gallery-2'));
 
 		gallery.init(0);
 
@@ -48,8 +46,8 @@
 			<li><a href="index.html">首页</a></li>
 			<li><a href="room.html">客房住宿</a></li>
 			<li><a href="fitness.html">动感五洲</a></li>
-			<li><a href="conference.html">五洲之夜</a></li>
-			<li class="selected"><a href="cusine.html">五洲美食</a></li>
+			<li class="selected"><a href="conference.html">五洲之夜</a></li>
+			<li><a href="cusine.html">五洲美食</a></li>
 			<li><a href="aboutus.html">关于我们</a></li>
 		</ul>
 	</div>
@@ -59,26 +57,20 @@
 		<div id="splashBox" class="box">
 			<div id="gallery" class="gallery">
 				<div id="gallery-box" class="section"></div>
-				<div id="gallery-1" class="section" style="display: none">
-					<h3>西餐厅</h3>
-					<p>即将推出的位于酒店5楼的阳光花园西餐厅是重庆最大最高端的西餐厅，其菜品、服务、就餐环境等远远超出山城现有的同星级酒店水平。阳光西餐厅提供早、中、晚自助餐服务，上百种菜品以亚洲特式为主，搭配欧、美风味佳肴和数十种生猛海鲜供君选择，可同时容纳240人就餐。</p>
+				<div id="gallery-1" class="section" style="display: none;">
+					<h3>音乐会所</h3>
+					<h4 class="subheading"></h4>
+					<p>重庆五洲大酒店2009底，巨资打造的全新音乐会所，拥有豪华装修、精致典雅、风情各异的KTV包房9间，全新进口的JBL音响，带给您超级震撼的视听享受。</p>
+					<p>容纳60人的音乐大厅，由全市一流的表演团体为您倾情演绎怀旧、经典的夜上海爵士乐。</p>
+					<p>音乐会所是您宴请宾客、朋友聚会的绝佳场所。</p>
 				</div>
-				<div id="gallery-2" class="section" style="display: none;">
-					<h3>粤皇府</h3>
-					<p>位于酒店三楼的“粤皇府”中餐厅——2000平米豪华大厅，卡式隔断布局、格调高雅，可同时容纳300人就餐，是承办大型会议用餐、婚宴、寿宴的理想场所。</p>
-				</div>
-				<div id="gallery-3" class="section" style="display:none;">
-					<h3>渝都府</h3>
-					<p>位于酒店二楼的“渝都府”餐厅，可以根据会议要求不同，采取不同形式的用餐方式（自助或围桌），可同时容纳120人就餐，是承办大型会议用餐的理想场所。</p>
-				</div>
-				<div id="gallery-4" class="section" style="display:none;">
-					<h3>叙兰厅</h3>
-					<p>酒店共有30个风格各异、精致典雅的包房， 2008年全新推出叙兰厅贵宾1号、2号、3号包房，2009年隆重推出“国际宴会厅”，是高级政务、商务接待的最佳选择。在此，有经专业资格认证的营养师倾情推荐营养菜单；有贵宾礼仪员周到细致的服务，是宴请重要宾客的理想场所。</p>
+				<div id="gallery-2" class="section" style="display:none;">
+					<h3>北海道足艺</h3>
+					<h4 class="subheading"></h4>
+					<p>位于酒店负一楼的北海道足艺，内设包房13间，专业的按摩技师为您提供中式、保健按摩、足艺、香薰调理、高丽养身、精油开背、采耳、修脚等服务。让您疲劳之余能彻底放松身心，悠闲惬意。</p>
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
 					</ul>
@@ -103,7 +95,7 @@
 						<div class="figure">
 							<img src="res/figure.png" />
 						</div>
-						<p>周一至周五，标准客房八折优惠，还有SPA优惠券，奢华尊贵体验。</p>
+						<p>11月10日至12月10日五洲南亚美食节，体验最纯正的东南亚风情</p>
 					</div>
 				</div>
 				<div class="section">
@@ -113,6 +105,7 @@
 						</div>
 						<p>预定法式养身SPA护理套餐，赠送2晚豪华标准间住宿</p>
 						<p class="more"><a href="#">查看详情－需酒店提供内容</a></p>
+
 					</div>
 				</div>
 			</div>
@@ -120,44 +113,36 @@
 		<div id="mainContentBox" class="box">
 			<div class="panel">
 				<div class="header">
-					<h3>五洲美食</h3>
+					<h3>五洲健身中心</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li class="selected"><a href="#">精品粤菜</a></li>
-						<li><a href="#">粤色轩</a></li>
-                                                <li><a href="#">阳光西餐厅</a></li>
-						<li><a href="#">听蝉轩</a></li>
-						<li><a href="#">九龙阁</a></li>
-						<li><a href="#">辣道主义</a></li>
+						<li class="selected"><a href="#">室内网球场</a></li>
+						<li><a href="#">恒温游泳池</a></li>
+						<li><a href="#">室内健身房</a></li>
+						<li><a href="#">斯诺克及美式台球</a></li>
+						<li><a href="#">SPA按摩中心</a></li>
 					</ul>
 				</div>
 				<div class="section">
-					<div class="figures" id="thumbFigures">
-						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
-						</div>
-						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
-						</div>
-						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
-						</div>
-						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
-						</div>
-						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
-						</div>
-						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
-						</div>
+					<div id="thumbFigure" class="figure">
+						<a title="室内网球场" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
+						<div class="legend">室内网球场</div>
+					</div>
+					<h4>室内网球场</h4>
+					<p class="summary">此处需酒店提供相应文档</p>
+					<hr />
+					<div class="description">
+						<ul>
+							<li>室内恒定温度</li>
+							<li>意大利塑胶场地</li>
+							<li>单打/双打</li>
+							<li>记分器</li>
+							<li>专业裁判服务</li>
+							<li>专业教练服务</li>
+							<li>专业球童服务</li>
+							<li>此处需酒店提供相应文档</li>
+						</ul>
 					</div>
 				</div>
 			</div>
