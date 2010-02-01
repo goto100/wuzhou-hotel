@@ -370,6 +370,7 @@ div.gallery .section {
 	padding: 30px;
 	height: 280px;
 	margin-left: 30px;
+	opacity: 0.92;
 	_background: none;
 	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='style/cssimg/top1.png', sizingMethod='crop');
 }
