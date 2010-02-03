@@ -12,28 +12,10 @@
 	$('body').ready(function() {
 		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/fitness1.gif', $('#gallery-1'));
-		gallery.addImage('res/fitness2.png', $('#gallery-2'));
+		gallery.addImage('res/fitness2.png', $('#gallery-1'));
+		gallery.addImage('res/fitness1.gif', $('#gallery-2'));
 
 		gallery.init(0);
-
-		gallery.onload = function() {
-			var more = $('#gallery .section .more');
-			more.trigger = $('#gallery .section .more a');
-			more.menu = $('#gallery .section .menu');
-			more.menu.hide();
-			more.trigger.click(function() {
-				more.menu.toggle();
-				clearInterval(gallery.timer);
-			});
-		}
-
-		$('#thumbFigure a, #thumbFigures a').lightBox({
-			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
-			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
-			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
-			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
-		});
 	});
 </script>
 </head>
@@ -109,38 +91,36 @@
 			</div>
 		</div>
 		<div id="mainContentBox" class="box">
-			<div class="panel">
+			<div class="panel content-panel">
 				<div class="header">
-					<h3>五洲健身中心</h3>
+					<h3>动感五洲</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li class="selected"><a href="#">室内网球场</a></li>
-						<li><a href="#">恒温游泳池</a></li>
-						<li><a href="#">室内健身房</a></li>
-						<li><a href="#">斯诺克及美式台球</a></li>
-						<li><a href="#">SPA按摩中心</a></li>
+						<li class="selected"><a href="#fitness1-section">恒温游泳池</a></li>
+						<li><a href="#fitness2-section">室内网球场</a></li>
 					</ul>
 				</div>
-				<div class="section">
-					<div id="thumbFigure" class="figure">
+				<div id="fitness1-section" class="section">
+					<div class="figure">
+						<a title="恒温游泳池" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
+						<div class="legend">恒温游泳池</div>
+					</div>
+					<h4>恒温游泳池</h4>
+					<p class="summary"></p>
+					<hr />
+					<div class="description">
+					</div>
+				</div>
+				<div id="fitness2-section" class="section" style="display:none">
+					<div class="figure">
 						<a title="室内网球场" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
 						<div class="legend">室内网球场</div>
 					</div>
 					<h4>室内网球场</h4>
-					<p class="summary">此处需酒店提供相应文档</p>
+					<p class="summary"></p>
 					<hr />
 					<div class="description">
-						<ul>
-							<li>室内恒定温度</li>
-							<li>意大利塑胶场地</li>
-							<li>单打/双打</li>
-							<li>记分器</li>
-							<li>专业裁判服务</li>
-							<li>专业教练服务</li>
-							<li>专业球童服务</li>
-							<li>此处需酒店提供相应文档</li>
-						</ul>
 					</div>
 				</div>
 			</div>
