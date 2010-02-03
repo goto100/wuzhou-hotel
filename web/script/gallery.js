@@ -47,3 +47,24 @@ Gallery.prototype = {
 		this.images.push({url: url, box: box});
 	}
 }
+
+$('body').ready(function() {
+
+	$('.content-panel .figure a, #thumbFigures a').lightBox({
+		imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
+		imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
+		imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
+		imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
+	});
+
+	var anchors = $('.content-panel .nav li a');
+	anchors.click(function() {
+		for (var i = 0; anchor = anchors[i]; i++) {
+			$($(anchor).attr('href')).hide();
+			$(anchor.parentNode).removeClass('selected');
+		}
+		$($(this).attr('href')).show();
+		$(this.parentNode).addClass('selected');
+		return false;
+	});
+})

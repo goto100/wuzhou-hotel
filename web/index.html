@@ -19,24 +19,6 @@
 		gallery.addImage('res/index3.gif', $('#gallery-5'));
 
 		gallery.init(0);
-
-		gallery.onload = function() {
-			var more = $('#gallery .section .more');
-			more.trigger = $('#gallery .section .more a');
-			more.menu = $('#gallery .section .menu');
-			more.menu.hide();
-			more.trigger.click(function() {
-				more.menu.toggle();
-				clearInterval(gallery.timer);
-			});
-		}
-
-		$('#thumbFigure a, #thumbFigures a').lightBox({
-			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
-			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
-			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
-			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
-		});
 	});
 </script>
 </head>

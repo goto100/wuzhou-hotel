@@ -12,30 +12,13 @@
 	$('body').ready(function() {
 		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/fitness1.gif', $('#gallery-1'));
-		gallery.addImage('res/fitness2.png', $('#gallery-2'));
+		gallery.addImage('res/musical.jpg', $('#gallery-1'));
+		gallery.addImage('res/zuyibig.jpg', $('#gallery-2'));
 
 		gallery.init(0);
-
-		gallery.onload = function() {
-			var more = $('#gallery .section .more');
-			more.trigger = $('#gallery .section .more a');
-			more.menu = $('#gallery .section .menu');
-			more.menu.hide();
-			more.trigger.click(function() {
-				more.menu.toggle();
-				clearInterval(gallery.timer);
-			});
-		}
-
-		$('#thumbFigure a, #thumbFigures a').lightBox({
-			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
-			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
-			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
-			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
-		});
 	});
 </script>
+<script type="text/javascript" src="script/common.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -111,38 +94,38 @@
 			</div>
 		</div>
 		<div id="mainContentBox" class="box">
-			<div class="panel">
+			<div class="panel content-panel">
 				<div class="header">
-					<h3>五洲健身中心</h3>
+					<h3>五洲之夜</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li class="selected"><a href="#">室内网球场</a></li>
-						<li><a href="#">恒温游泳池</a></li>
-						<li><a href="#">室内健身房</a></li>
-						<li><a href="#">斯诺克及美式台球</a></li>
-						<li><a href="#">SPA按摩中心</a></li>
+						<li class="selected"><a href="#dish1-section">音乐会所</a></li>
+						<li><a href="#dish2-section">北海道足艺</a></li>
 					</ul>
 				</div>
-				<div class="section">
-					<div id="thumbFigure" class="figure">
-						<a title="室内网球场" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
-						<div class="legend">室内网球场</div>
+				<div id="dish1-section" class="section">
+					<div class="figure">
+						<a title="音乐会所" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
+						<div class="legend">音乐会所</div>
 					</div>
-					<h4>室内网球场</h4>
-					<p class="summary">此处需酒店提供相应文档</p>
+					<h4>音乐会所</h4>
 					<hr />
 					<div class="description">
-						<ul>
-							<li>室内恒定温度</li>
-							<li>意大利塑胶场地</li>
-							<li>单打/双打</li>
-							<li>记分器</li>
-							<li>专业裁判服务</li>
-							<li>专业教练服务</li>
-							<li>专业球童服务</li>
-							<li>此处需酒店提供相应文档</li>
-						</ul>
+						<p>重庆五洲大酒店2009底，巨资打造的全新音乐会所，拥有豪华装修、精致典雅、风情各异的KTV包房9间，全新进口的JBL音响，带给您超级震撼的视听享受。</p>
+						<p>容纳60人的音乐大厅，由全市一流的表演团体为您倾情演绎怀旧、经典的夜上海爵士乐。</p>
+						<p>音乐会所是您宴请宾客、朋友聚会的绝佳场所。</p>
+					</div>
+				</div>
+				<div id="dish2-section" class="section" style="display: none;">
+					<div class="figure">
+						<a title="北海道足艺" href="res/fitnessbigfiguresrc.gif"><img src="res/fitnessbigfigure.gif" /></a>
+						<div class="legend">北海道足艺</div>
+					</div>
+					<h4>北海道足艺</h4>
+					<hr />
+					<div class="description">
+						<p>位于酒店负一楼的北海道足艺，内设包房13间，专业的按摩技师为您提供中式、保健按摩、足艺、香薰调理、高丽养身、精油开背、采耳、修脚等服务。让您疲劳之余能彻底放松身心，悠闲惬意。</p>
 					</div>
 				</div>
 			</div>

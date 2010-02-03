@@ -14,39 +14,10 @@
 
 		gallery.addImage('res/index2.gif', $('#gallery-1'));
 		gallery.addImage('res/room2.png', $('#gallery-2'));
-		gallery.addImage('res/common_pics1.png', $('#gallery-3'));
-		gallery.addImage('res/common_pics1.png', $('#gallery-4'));
+		gallery.addImage('res/businesssuitebig.jpg', $('#gallery-3'));
+		gallery.addImage('res/luxuryroombig.jpg', $('#gallery-4'));
 
 		gallery.init(0);
-
-		gallery.onload = function() {
-			var more = $('#gallery .section .more');
-			more.trigger = $('#gallery .section .more a');
-			more.menu = $('#gallery .section .menu');
-			more.menu.hide();
-			more.trigger.click(function() {
-				more.menu.toggle();
-				clearInterval(gallery.timer);
-			});
-		}
-
-		$('.content-panel .figure a, #thumbFigures a').lightBox({
-			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
-			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
-			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
-			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
-		});
-
-		var anchors = $('.content-panel .nav li a');
-		anchors.click(function() {
-			for (var i = 0; anchor = anchors[i]; i++) {
-				$($(anchor).attr('href')).hide();
-				$(anchor.parentNode).removeClass('selected');
-			}
-			$($(this).attr('href')).show();
-			$(this.parentNode).addClass('selected');
-			return false;
-		});
 	});
 </script>
 </head>
@@ -152,7 +123,7 @@
 					<hr />
 					<div class="description">
 						<ul>
-							<li>所有客房免费提供高速宽带上网</li>
+							<li>免费提供高速宽带上网</li>
 							<li>符合人体工学的办公桌椅</li>
 							<li>标志性卫浴用品</li>
 							<li>迷你吧</li>
@@ -186,7 +157,7 @@
 					<hr />
 					<div class="description">
 						<ul>
-							<li>所有客房免费提供高速宽带上网</li>
+							<li>免费提供高速宽带上网</li>
 							<li>符合人体工学的办公桌椅</li>
 							<li>标志性卫浴用品</li>
 							<li>迷你吧</li>
@@ -220,7 +191,7 @@
 					<hr />
 					<div class="description">
 						<ul>
-							<li>所有客房免费提供高速宽带上网</li>
+							<li>免费提供高速宽带上网</li>
 							<li>符合人体工学的办公桌椅</li>
 							<li>标志性卫浴用品</li>
 							<li>迷你吧</li>
@@ -254,7 +225,7 @@
 					<hr />
 					<div class="description">
 						<ul>
-							<li>所有客房免费提供高速宽带上网</li>
+							<li>免费提供高速宽带上网</li>
 							<li>符合人体工学的办公桌椅</li>
 							<li>标志性卫浴用品</li>
 							<li>迷你吧</li>

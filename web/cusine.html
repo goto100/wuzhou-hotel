@@ -12,30 +12,12 @@
 	$('body').ready(function() {
 		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
-		gallery.addImage('res/cusine3.png', $('#gallery-1'));
+		gallery.addImage('res/sunshine.jpg', $('#gallery-1'));
 		gallery.addImage('res/cusine1.png', $('#gallery-2'));
 		gallery.addImage('res/cusine2.png', $('#gallery-3'));
 		gallery.addImage('res/common_pics1.png', $('#gallery-4'));
 
 		gallery.init(0);
-
-		gallery.onload = function() {
-			var more = $('#gallery .section .more');
-			more.trigger = $('#gallery .section .more a');
-			more.menu = $('#gallery .section .menu');
-			more.menu.hide();
-			more.trigger.click(function() {
-				more.menu.toggle();
-				clearInterval(gallery.timer);
-			});
-		}
-
-		$('#thumbFigure a, #thumbFigures a').lightBox({
-			imageLoading: 'lib/lightbox/images/lightbox-ico-loading.gif',
-			imageBtnClose: 'lib/lightbox/images/lightbox-btn-close.gif',
-			imageBtnPrev: 'lib/lightbox/images/lightbox-btn-prev.gif',
-			imageBtnNext: 'lib/lightbox/images/lightbox-btn-next.gif'
-		});
 	});
 </script>
 </head>
@@ -60,7 +42,7 @@
 			<div id="gallery" class="gallery">
 				<div id="gallery-box" class="section"></div>
 				<div id="gallery-1" class="section" style="display: none">
-					<h3>西餐厅</h3>
+					<h3>阳光花园西餐厅</h3>
 					<p>即将推出的位于酒店5楼的阳光花园西餐厅是重庆最大最高端的西餐厅，其菜品、服务、就餐环境等远远超出山城现有的同星级酒店水平。阳光西餐厅提供早、中、晚自助餐服务，上百种菜品以亚洲特式为主，搭配欧、美风味佳肴和数十种生猛海鲜供君选择，可同时容纳240人就餐。</p>
 				</div>
 				<div id="gallery-2" class="section" style="display: none;">
@@ -118,45 +100,43 @@
 			</div>
 		</div>
 		<div id="mainContentBox" class="box">
-			<div class="panel">
+			<div class="panel content-panel">
 				<div class="header">
 					<h3>五洲美食</h3>
 				</div>
 				<div class="nav">
 					<ul>
-						<li class="selected"><a href="#">精品粤菜</a></li>
-						<li><a href="#">粤色轩</a></li>
-                                                <li><a href="#">阳光西餐厅</a></li>
-						<li><a href="#">听蝉轩</a></li>
-						<li><a href="#">九龙阁</a></li>
-						<li><a href="#">辣道主义</a></li>
+						<li class="selected"><a href="#dish1-section">阳光花园西餐厅</a></li>
+						<li><a href="#dish1-section">粤皇府</a></li>
+						<li><a href="#dish1-section">渝都府</a></li>
+						<li><a href="#dish1-section">叙兰厅</a></li>
 					</ul>
 				</div>
-				<div class="section">
+				<div id="dish1-section" class="section">
 					<div class="figures" id="thumbFigures">
 						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
+							<a title="蓝莓嫩藕" href="res/dish1big.jpg"><img src="res/dish1small.jpg" width="200" /></a>
+							<div class="legend">蓝莓嫩藕</div>
 						</div>
 						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
+							<a title="酸辣三丝鱼翅羹" href="res/dish2big.jpg"><img src="res/dish2small.jpg" width="200" /></a>
+							<div class="legend">酸辣三丝鱼翅羹</div>
 						</div>
 						<div class="figure">
-							<a title="夏日之恋" href="res/dish1bigfigurerc.png"><img src="res/dish1.png" width="200" /></a>
-							<div class="legend">夏日之恋</div>
+							<a title="竹荪燕影翅" href="res/dish3big.jpg"><img src="res/dish3small.jpg" width="200" /></a>
+							<div class="legend">竹荪燕影翅</div>
 						</div>
 						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
+							<a title="红烧鹿筋" href="res/dish4big.jpg"><img src="res/dish4small.jpg" width="200" /></a>
+							<div class="legend">红烧鹿筋</div>
 						</div>
 						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
+							<a title="酱黄焗辽参" href="res/dish5big.jpg"><img src="res/dish5small.jpg" width="200" /></a>
+							<div class="legend">酱黄焗辽参</div>
 						</div>
 						<div class="figure">
-							<a title="小米辽参" href="res/dish2bigfigurerc.gif"><img src="res/dish2.gif" width="200" /></a>
-							<div class="legend">小米辽参</div>
+							<a title="瑶柱煲淋节瓜" href="res/dish6big.jpg"><img src="res/dish6small.jpg" width="200" /></a>
+							<div class="legend">瑶柱煲淋节瓜</div>
 						</div>
 					</div>
 				</div>
