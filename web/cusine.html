@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
+		gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
 		gallery.addImage('res/sunshine.jpg', $('#gallery-1'));
 		gallery.addImage('res/cusine1.png', $('#gallery-2'));
@@ -20,6 +20,7 @@
 		gallery.init(0);
 	});
 </script>
+<script type="text/javascript" src="script/common.js"></script>
 </head>
 <body>
 <div id="wrapper">
