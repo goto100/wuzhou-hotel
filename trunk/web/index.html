@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		var gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
+		gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
 		gallery.addImage('res/index1.gif', $('#gallery-1'));
 		gallery.addImage('res/index2.gif', $('#gallery-2'));
@@ -21,6 +21,7 @@
 		gallery.init(0);
 	});
 </script>
+<script type="text/javascript" src="script/common.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -67,11 +68,10 @@
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
-								<li><a href="room.html">标准客房</a></li>
-								<li><a href="room.html">单人客房</a></li>
-								<li><a href="#">行政客房</a></li>
-								<li><a href="#">中式套房</a></li>
-								<li><a href="#">总统套房</a></li>
+								<li><a href="room.html">商务标准间</a></li>
+								<li><a href="room.html">行政单人间</a></li>
+								<li><a href="#">商务套房</a></li>
+								<li><a href="#">豪华套房</a></li>
 							</ul>
 						</div>
 					</div>
@@ -84,11 +84,8 @@
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
-								<li><a href="fitness.html">室内网球场</a></li>
 								<li><a href="fitness.html">恒温游泳池</a></li>
-								<li><a href="fitness.html">室内健身房</a></li>
-								<li><a href="fitness.html">斯诺克及美式台球</a></li>
-								<li><a href="fitness.html">SPA中心</a></li>
+								<li><a href="fitness.html">室内网球场</a></li>
 							</ul>
 						</div>
 					</div>
@@ -101,10 +98,8 @@
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
-								<li><a href="conference.html">水晶会所</a></li>
-								<li><a href="conference.html">KTV会所</a></li>
 								<li><a href="conference.html">音乐会所</a></li>
-								<li><a href="conference.html">夜上海舞厅</a></li>
+								<li><a href="conference.html">北海道足艺</a></li>
 							</ul>
 						</div>
 					</div>
@@ -117,11 +112,10 @@
 						<a class="legend" href="#">了解更多 ▶</a>
 						<div class="menu">
 							<ul>
-								<li><a href="cusine.html">阳光西餐厅</a></li>
-								<li><a href="cusine.html">粤色轩</a></li>
-								<li><a href="cusine.html">听蝉轩</a></li>
-								<li><a href="cusine.html">九龙阁</a></li>
-								<li><a href="cusine.html">辣道主义</a></li>
+								<li><a href="cusine.html">阳光花园西餐厅</a></li>
+								<li><a href="cusine.html">粤皇府</a></li>
+								<li><a href="cusine.html">渝都府</a></li>
+								<li><a href="cusine.html">叙兰厅</a></li>
 							</ul>
 						</div>
 					</div>
@@ -140,7 +134,7 @@
 		<div id="bookBox" class="box">
 			<div class="panel">
 				<div class="header">
-					<h3>在线预订(功能预留)</h3>
+					<h3>在线预订(即将开发)</h3>
 				</div>
 				<div class="section">
 					<form action="#" method="post">
@@ -187,7 +181,7 @@
 					<h3>超值推荐</h3>
 				</div>
 				<div class="section">
-					<a href="#"><img src="res/indexcommend.png"/></a>
+					<a href="cusine.html"><img src="res/indexcommend.png"/></a>
 				</div>
 			</div>
 		</div>
