@@ -212,7 +212,9 @@ form p {
 
 #footer {
 	margin-bottom: 10px;
+	text-align: center;
 }
+#gongshang {margin: 0 auto;}
 #copyright {
 	text-align: center;
 	color: #999;
@@ -468,3 +470,4 @@ div.gallery .nav a {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 }
+
