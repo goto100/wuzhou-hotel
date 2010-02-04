@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="lib/lightbox/css/jquery.lightbox-0.5.css" media="screen" defer="true" />
 <script type="text/javascript">
 	$('body').ready(function() {
-		gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
+		var gallery = window.gallery = new Gallery($('#gallery'), $('#gallery-box'), $('#gallery .nav li'));
 
 		gallery.addImage('res/musical.jpg', $('#gallery-1'));
 		gallery.addImage('res/zuyibig.jpg', $('#gallery-2'));
